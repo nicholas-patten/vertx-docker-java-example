@@ -18,10 +18,6 @@ object Project : Project({
 
     buildType(VertxDockerJavaExample_Build)
 
-    params {
-        password("env.GITHUB_TOKEN", "credentialsJSON:31430087-7c10-409d-b44d-5e03b5fc5df8", display = ParameterDisplay.HIDDEN, readOnly = true)
-    }
-
     features {
         versionedSettings {
             id = "PROJECT_EXT_3"
