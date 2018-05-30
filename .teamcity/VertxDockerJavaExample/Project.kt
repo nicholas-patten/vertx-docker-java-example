@@ -9,7 +9,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.VersionedSet
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.versionedSettings
 
 object Project : Project({
-    uuid = "06ad5108-7f9c-468e-919d-296094950e38"
+    uuid = "80cb5963-8e40-40e6-b782-f6961fb60688"
     id = "VertxDockerJavaExample"
     parentId = "_Root"
     name = "Vertx Docker Java Example"
@@ -22,7 +22,7 @@ object Project : Project({
         versionedSettings {
             id = "PROJECT_EXT_3"
             mode = VersionedSettings.Mode.ENABLED
-            buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_SETTINGS_FROM_VCS
+            buildSettingsMode = VersionedSettings.BuildSettingsMode.USE_CURRENT_SETTINGS
             rootExtId = VertxDockerJavaExample_HttpsGithubComNicholasPattenVertxDockerJavaExampleRefsHea.id
             showChanges = false
             settingsFormat = VersionedSettings.Format.KOTLIN

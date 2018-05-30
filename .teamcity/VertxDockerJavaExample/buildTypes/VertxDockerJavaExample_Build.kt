@@ -6,7 +6,7 @@ import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object VertxDockerJavaExample_Build : BuildType({
-    uuid = "8e09c2e4-e159-497e-9b10-dc8e75fcbebb"
+    uuid = "0150a999-e162-417a-8b6e-bf4c1dd6951b"
     id = "VertxDockerJavaExample_Build"
     name = "Build"
 
@@ -17,15 +17,13 @@ object VertxDockerJavaExample_Build : BuildType({
 
     steps {
         maven {
-            goals = "clean install"
+            goals = "clean test"
             mavenVersion = defaultProvidedVersion()
         }
         dockerBuild {
             source = path {
                 path = "Dockerfile"
             }
-            namesAndTags = "sample/vertx-java"
-            commandArgs = ""
         }
     }
 
